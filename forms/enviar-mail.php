@@ -3,7 +3,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   
   // Define as informações do destinatário do email
-  $to = "seuemail@seudominio.com";
+  $to = " alexandre@hdil.com.br";
   $subject = $_POST["subject"];
 
   // Define as informações do remetente do email
