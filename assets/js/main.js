@@ -270,3 +270,57 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+$(document).ready(function () {
+  var active = $(".tv-infinite-menu .active");
+  var activeWidth = active.width();
+  // var pos = active.position().left + activeWidth;
+  var pos = active.position().left - 15;
+  $('.tv-infinite-menu').animate({
+    scrollLeft: pos
+  }, 500);
+});
+
+$("select[name='filtro']").change(function () {
+  var theurl = $(this).children("option:selected").val();
+  window.location.href = theurl;
+});
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('serviceworker.js')
+    .then(function () {
+      console.log('Service Worker Registered');
+    });
+}
+
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  deferredPrompt = e;
+  addBtn.style.display = 'block';
+  deferredPrompt.prompt();
+  deferredPrompt.userChoice.then((choiceResult) => {
+    if (choiceResult.outcome === 'accepted') {
+      console.log('User accepted the A2HS prompt');
+    } else {
+      console.log('User dismissed the A2HS prompt');
+    }
+    deferredPrompt = null;
+  });
+});
+
+$(document).ready(function () {
+  var active = $(".tv-infinite-menu .active");
+  var activeWidth = active.width();
+  // var pos = active.position().left + activeWidth;
+  var pos = active.position().left - 15;
+  $('.tv-infinite-menu').animate({
+    scrollLeft: pos
+  }, 500);
+});
+
+$("select[name='filtro']").change(function () {
+  var theurl = $(this).children("option:selected").val();
+  window.location.href = theurl;
+});
