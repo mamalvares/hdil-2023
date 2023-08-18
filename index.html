@@ -46,7 +46,6 @@
   <link rel="stylesheet" href="https://hdil.lojazap.com/app/estabelecimento/css/style.php?id=382">
   <script src="https://hdil.lojazap.com/_core/_cdn/jquery/js/jquery.min.js"></script>
   <script src="https://hdil.lojazap.com/_core/_cdn/fancybox/js/jquery.fancybox.min.js"></script>
-
   <!-- <script src="https://hdil.lojazap.com/_core/_cdn/instantclick/js/instantclick.min.js"></script> -->
   <script
     src="https://hdil.lojazap.com/app/estabelecimento/js/script.php?insubdominiourl=hdil&virtualpath=/home/lojaza04/public_html/app/estabelecimento">
@@ -76,7 +75,11 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li class="dropdown"><a href="#catalog"><span>Catálogo</span> <i class="bi bi-chevron-down"></i></a>
+
+          <li><a class="nav-link scrollto" href="#about">Sobre</a></li>
+
+          <li class="nav-link scrollto dropdown">
+            <a href="#catalog">Catálogo<i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="https://hdil.lojazap.com/categoria/475">ESPUMAS</a></li>
               <li><a href="https://hdil.lojazap.com/categoria/517">MADEIRAS</a></li>
@@ -93,33 +96,20 @@
               <li><a href="https://hdil.lojazap.com/categoria/3076">PONTEIRAS</a></li>
               <li><a href="https://hdil.lojazap.com/categoria/3085">ACESS. P/ MÓVEIS</a></li>
               <li><a href="https://hdil.lojazap.com/categoria/3082">BUCHAS/NIVELADORES</a></li>
-
-              <!--
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                </ul>
-              </li>
-            -->
-
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#about">Sobre</a></li>
+
           <li><a class="nav-link scrollto" href="#contact">Contato</a></li>
-          <li><a class="getstarted scrollto" href="#">Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
       <!-- .navbar -->
-
     </div>
   </header>
   <!-- Final Header -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
-
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
@@ -138,7 +128,6 @@
         </div>
       </div>
     </div>
-
   </section>
   <!-- Final Hero -->
 
@@ -305,9 +294,12 @@
                 <div class="container">
                   <div class="row rowtitle hidden-xs hidden-sm">
                     <div class="col-md-12">
+                      <div class="title-icon">
+                        <span>Geral</span>
+                      </div>
                       <div class="bread-box">
                         <div class="bread">
-                          <a href="https://hdil.lojazap.com"><i class="bi bi-house"></i></a>
+                          <a href="https://hdil.lojazap.com"><i class="lni lni-home"></i></a>
                           <span>/</span>
                           <a href="https://hdil.lojazap.com/categoria/">Categorias</a>
                           <span>/</span>
@@ -316,34 +308,24 @@
                       </div>
                     </div>
 
-
                     <div class="col-md-12 hidden-xs hidden-sm">
                       <div class="clearline"></div>
                     </div>
-
                   </div>
 
                   <div class="row">
-
                     <div class="col-md-12">
-
                       <div class="search-bar-mobile visible-xs visible-sm">
-
                         <form class="align-middle" method="GET">
-
-                          <input type="text" name="busca" placeholder="Digite sua busca..." value="">
-                          <input type="hidden" name="categoria" value="">
+                          <input type="text" name="busca" placeholder="Digite sua busca..." value="" />
+                          <input type="hidden" name="categoria" value="" />
                           <button>
-                            <i class="bi bi-search"></i>
+                            <i class="lni lni-search-alt"></i>
                           </button>
                           <div class="clear"></div>
-
                         </form>
-
                       </div>
-
                     </div>
-
                   </div>
 
                   <div class="row">
@@ -371,139 +353,110 @@
 
                   <div class="categorias no-bottom-mobile">
                     <div class="categoria no-bottom-mobile">
+                      <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                          <strong class="counter">12</strong>
+                          <span class="title">Itens:</span>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                          <div class="filter-select pull-right">
+                            <i class="outside lni lni-funnel"></i>
+                            <div class="fake-select">
+                              <i class="lni lni-chevron-down"></i>
+                              <select name="filtro" onchange="selecturl()">
+                                <option value="https://hdil.lojazap.com/categoria/?&filtro=1">Relevância</option>
+                                <option value="https://hdil.lojazap.com/categoria/?&filtro=2">Preço <</option> <option
+                                    value="https://hdil.lojazap.com/categoria/?&filtro=3">Preço ></option>
+                                <option value="https://hdil.lojazap.com/categoria/?&filtro=4">Ofertas</option>
+                              </select>
+                              <div class="clear"></div>
+                            </div>
+                            <div class="clear"></div>
+                          </div>
+                        </div>
+                      </div>
+
                       <div class="produtos">
                         <div class="row tv-grid">
                           <div class="col-md-3 col-sm-6 col-xs-6">
                             <div class="produto">
-                              <a href="https://hdil.lojazap.com/produto/17832" title="CADEIRA ISO ESTRELA - PRETO">
+                              <a href="https://hdil.lojazap.com/produto/81149" title="CADEIRA ISO MAX - CORES">
                                 <div class="capa"
-                                  style="background: url(https://hdil.lojazap.com/_core/_uploads/382/2023/05/1459170523chbi9heced.jpg) no-repeat center center;">
-                                  <span class="nome">CADEIRA ISO ESTRELA - PRETO</span>
+                                  style="background: url(https://hdil.lojazap.com/_core/_uploads/382/2023/07/1400240723dk0icaejf4.webp) no-repeat center center;">
+                                  <span class="nome">CADEIRA ISO MAX - CORES</span>
                                 </div>
 
                                 <span class="apenas apenas-single">
-                                  Por <br> apenas </span>
-                                <span class="valor">R$ 115,00</span>
-                                <div class="detalhes"><i class="icone icone-sacola"></i> <span>Comprar</span></div>
+                                  Por <br /> apenas </span>
+                                <span class="valor">R$ 124,20</span>
+                                <div class="detalhes"><i class="lni lni-cart"></i> <span>Comprar</span></div>
                               </a>
                             </div>
                           </div>
 
                           <div class="col-md-3 col-sm-6 col-xs-6">
                             <div class="produto">
-                              <a href="https://hdil.lojazap.com/produto/17646" title="CADEIRA ISO ESTRELA - AZUL">
+                              <a href="https://hdil.lojazap.com/produto/81052" title="CADEIRA ISO MAX - PRETO">
                                 <div class="capa"
-                                  style="background: url(https://hdil.lojazap.com/_core/_uploads/382/2023/05/1157170523cf69hc87bj.jpg) no-repeat center center;">
-                                  <span class="nome">CADEIRA ISO ESTRELA - AZUL</span>
+                                  style="background: url(https://hdil.lojazap.com/_core/_uploads/382/2023/07/1321240723gd97jga5hd.webp) no-repeat center center;">
+                                  <span class="nome">CADEIRA ISO MAX - PRETO</span>
                                 </div>
 
                                 <span class="apenas apenas-single">
-                                  Por <br> apenas </span>
-                                <span class="valor">R$ 125,00</span>
-                                <div class="detalhes"><i class="icone icone-sacola"></i> <span>Comprar</span></div>
+                                  Por <br /> apenas </span>
+                                <span class="valor">R$ 115,20</span>
+                                <div class="detalhes"><i class="lni lni-cart"></i> <span>Comprar</span></div>
                               </a>
                             </div>
                           </div>
 
                           <div class="col-md-3 col-sm-6 col-xs-6">
                             <div class="produto">
-                              <a href="https://hdil.lojazap.com/produto/17643" title="CADEIRA ISO ESTRELA - VERMELHO">
+                              <a href="https://hdil.lojazap.com/produto/81049" title="CADEIRA ISO ESTRELA - CORES">
 
                                 <div class="capa"
-                                  style="background: url(https://hdil.lojazap.com/_core/_uploads/382/2023/05/11561705234628gkegc7.jpg) no-repeat center center;">
-                                  <span class="nome">CADEIRA ISO ESTRELA - VERMELHO</span>
+                                  style="background: url(https://hdil.lojazap.com/_core/_uploads/382/2023/07/13192407237a7c6g6k9b.webp) no-repeat center center;">
+                                  <span class="nome">CADEIRA ISO ESTRELA - CORES</span>
                                 </div>
 
                                 <span class="apenas apenas-single">
-                                  Por <br> apenas </span>
-                                <span class="valor">R$ 125,00</span>
-                                <div class="detalhes"><i class="icone icone-sacola"></i> <span>Comprar</span></div>
-
+                                  Por <br /> apenas </span>
+                                <span class="valor">R$ 129,80</span>
+                                <div class="detalhes"><i class="lni lni-cart"></i> <span>Comprar</span></div>
                               </a>
                             </div>
                           </div>
 
                           <div class="col-md-3 col-sm-6 col-xs-6">
                             <div class="produto">
-                              <a href="https://hdil.lojazap.com/produto/17635" title="CADEIRA ISO ESTRELA - MARRON">
+                              <a href="https://hdil.lojazap.com/produto/81045" title="CADEIRA ISO ESTRELA PRETA">
 
                                 <div class="capa"
-                                  style="background: url(https://hdil.lojazap.com/_core/_uploads/382/2023/05/1152170523bieg6h2abh.jpg) no-repeat center center;">
-                                  <span class="nome">CADEIRA ISO ESTRELA - MARRON</span>
+                                  style="background: url(https://hdil.lojazap.com/_core/_uploads/382/2023/07/1318240723abf0iibice.webp) no-repeat center center;">
+                                  <span class="nome">CADEIRA ISO ESTRELA PRETA</span>
                                 </div>
 
                                 <span class="apenas apenas-single">
-                                  Por <br> apenas </span>
-                                <span class="valor">R$ 125,00</span>
-                                <div class="detalhes"><i class="icone icone-sacola"></i> <span>Comprar</span></div>
+                                  Por <br /> apenas </span>
+                                <span class="valor">R$ 118,70</span>
+                                <div class="detalhes"><i class="lni lni-cart"></i> <span>Comprar</span></div>
                               </a>
                             </div>
                           </div>
 
                           <div class="col-md-3 col-sm-6 col-xs-6">
                             <div class="produto">
-                              <a href="https://hdil.lojazap.com/produto/17627" title="CADEIRA ISO MAX - PRETO ">
-
+                              <a href="https://hdil.lojazap.com/produto/23190" title="FLANGE DIRETOR C/ RELAX">
                                 <div class="capa"
-                                  style="background: url(https://hdil.lojazap.com/_core/_uploads/382/2023/05/1148170523h9cajd5hcf.jpg) no-repeat center center;">
-                                  <span class="nome">CADEIRA ISO MAX - PRETO </span>
+                                  style="background: url(https://hdil.lojazap.com/_core/_uploads/382/2023/05/1604240523hc0chf9gii.jpg) no-repeat center center;">
+                                  <span class="nome">FLANGE DIRETOR C/ RELAX</span>
                                 </div>
 
                                 <span class="apenas apenas-single">
-                                  Por <br> apenas </span>
-                                <span class="valor">R$ 110,00</span>
-                                <div class="detalhes"><i class="icone icone-sacola"></i> <span>Comprar</span></div>
-                              </a>
-                            </div>
-                          </div>
-
-                          <div class="col-md-3 col-sm-6 col-xs-6">
-                            <div class="produto">
-                              <a href="https://hdil.lojazap.com/produto/17612" title="CADEIRA ISO MAX - VERMELHO">
-
-                                <div class="capa"
-                                  style="background: url(https://hdil.lojazap.com/_core/_uploads/382/2023/05/1139170523gekcd4c5dd.jpg) no-repeat center center;">
-                                  <span class="nome">CADEIRA ISO MAX - VERMELHO</span>
-                                </div>
-
-                                <span class="apenas apenas-single">
-                                  Por <br> apenas </span>
-                                <span class="valor">R$ 120,00</span>
-                                <div class="detalhes"><i class="icone icone-sacola"></i> <span>Comprar</span></div>
-                              </a>
-                            </div>
-                          </div>
-
-                          <div class="col-md-3 col-sm-6 col-xs-6">
-                            <div class="produto">
-                              <a href="https://hdil.lojazap.com/produto/17609" title="CADEIRA ISO MAX - VERDE">
-
-                                <div class="capa"
-                                  style="background: url(https://hdil.lojazap.com/_core/_uploads/382/2023/05/1138170523111bec7k18.jpg) no-repeat center center;">
-                                  <span class="nome">CADEIRA ISO MAX - VERDE</span>
-                                </div>
-
-                                <span class="apenas apenas-single">
-                                  Por <br> apenas </span>
-                                <span class="valor">R$ 120,00</span>
-                                <div class="detalhes"><i class="icone icone-sacola"></i> <span>Comprar</span></div>
-                              </a>
-                            </div>
-                          </div>
-
-                          <div class="col-md-3 col-sm-6 col-xs-6">
-                            <div class="produto">
-                              <a href="https://hdil.lojazap.com/produto/17605" title="CADEIRA ISO MAX - AZUL">
-
-                                <div class="capa"
-                                  style="background: url(https://hdil.lojazap.com/_core/_uploads/382/2023/05/1135170523dc2jgcc0i5.jpg) no-repeat center center;">
-                                  <span class="nome">CADEIRA ISO MAX - AZUL</span>
-                                </div>
-
-                                <span class="apenas apenas-single">
-                                  Por <br> apenas </span>
-                                <span class="valor">R$ 120,00</span>
-                                <div class="detalhes"><i class="icone icone-sacola"></i> <span>Comprar</span></div>
+                                  Por <br /> apenas </span>
+                                <span class="valor">R$ 70,50</span>
+                                <div class="detalhes"><i class="lni lni-cart"></i> <span>Comprar</span></div>
                               </a>
                             </div>
                           </div>
@@ -518,9 +471,9 @@
                                 </div>
 
                                 <span class="apenas apenas-single">
-                                  Por <br> apenas </span>
+                                  Por <br /> apenas </span>
                                 <span class="valor">R$ 12,00</span>
-                                <div class="detalhes"><i class="icone icone-sacola"></i> <span>Comprar</span></div>
+                                <div class="detalhes"><i class="lni lni-cart"></i> <span>Comprar</span></div>
                               </a>
                             </div>
                           </div>
@@ -528,15 +481,16 @@
                           <div class="col-md-3 col-sm-6 col-xs-6">
                             <div class="produto">
                               <a href="https://hdil.lojazap.com/produto/7708" title="REGULAGEM ENCOSTO CABELEREIRO">
+
                                 <div class="capa"
                                   style="background: url(https://hdil.lojazap.com/_core/_uploads/382/2023/05/14130505234f9dhbb813.jpg) no-repeat center center;">
                                   <span class="nome">REGULAGEM ENCOSTO CABELEREIRO</span>
                                 </div>
 
                                 <span class="apenas apenas-single">
-                                  Por <br> apenas </span>
+                                  Por <br /> apenas </span>
                                 <span class="valor">R$ 5,50</span>
-                                <div class="detalhes"><i class="icone icone-sacola"></i> <span>Comprar</span></div>
+                                <div class="detalhes"><i class="lni lni-cart"></i> <span>Comprar</span></div>
                               </a>
                             </div>
                           </div>
@@ -550,9 +504,9 @@
                                 </div>
 
                                 <span class="apenas apenas-single">
-                                  Por <br> apenas </span>
+                                  Por <br /> apenas </span>
                                 <span class="valor">R$ 128,00</span>
-                                <div class="detalhes"><i class="icone icone-sacola"></i> <span>Comprar</span></div>
+                                <div class="detalhes"><i class="lni lni-cart"></i> <span>Comprar</span></div>
                               </a>
                             </div>
                           </div>
@@ -566,9 +520,61 @@
                                 </div>
 
                                 <span class="apenas apenas-single">
-                                  Por <br> apenas </span>
+                                  Por <br /> apenas </span>
                                 <span class="valor">R$ 9,30</span>
-                                <div class="detalhes"><i class="icone icone-sacola"></i> <span>Comprar</span></div>
+                                <div class="detalhes"><i class="lni lni-cart"></i> <span>Comprar</span></div>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="col-md-3 col-sm-6 col-xs-6">
+                            <div class="produto">
+                              <a href="https://hdil.lojazap.com/produto/7573" title="ENCOSTO MADEIRA PRESIDENTE">
+
+                                <div class="capa"
+                                  style="background: url(https://hdil.lojazap.com/_core/_uploads/382/2023/05/1151050523fecjef4kj6.jpg) no-repeat center center;">
+                                  <span class="nome">ENCOSTO MADEIRA PRESIDENTE</span>
+                                </div>
+
+                                <span class="apenas apenas-single">
+                                  Por <br /> apenas </span>
+                                <span class="valor">R$ 20,90</span>
+                                <div class="detalhes"><i class="lni lni-cart"></i> <span>Comprar</span></div>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="col-md-3 col-sm-6 col-xs-6">
+                            <div class="produto">
+                              <a href="https://hdil.lojazap.com/produto/7570" title="ENCOSTO MADEIRA DIRETOR">
+
+                                <div class="capa"
+                                  style="background: url(https://hdil.lojazap.com/_core/_uploads/382/2023/05/1151050523g6bc2gckgi.jpg) no-repeat center center;">
+                                  <span class="nome">ENCOSTO MADEIRA DIRETOR</span>
+                                </div>
+
+                                <span class="apenas apenas-single">
+                                  Por <br /> apenas </span>
+                                <span class="valor">R$ 14,90</span>
+                                <div class="detalhes"><i class="lni lni-cart"></i> <span>Comprar</span></div>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="col-md-3 col-sm-6 col-xs-6">
+                            <div class="produto">
+                              <a href="https://hdil.lojazap.com/produto/7566"
+                                title="ASSENTO MADEIRA DIRETOR/PRESIDENTE">
+
+                                <div class="capa"
+                                  style="background: url(https://hdil.lojazap.com/_core/_uploads/382/2023/05/1150050523hkiicjffif.jpg) no-repeat center center;">
+                                  <span class="nome">ASSENTO MADEIRA DIRETOR/PRESIDENTE</span>
+                                </div>
+
+                                <span class="apenas apenas-single">
+                                  Por <br /> apenas </span>
+                                <span class="valor">R$ 17,15</span>
+                                <div class="detalhes"><i class="lni lni-cart"></i> <span>Comprar</span></div>
                               </a>
                             </div>
                           </div>
@@ -580,12 +586,12 @@
                   <div class="paginacao">
                     <ul class="pagination">
                       <li class="page-item active"><a class="page-link"
-                          href=" https://hdil.lojazap.com/categoria//?pagina=1">1</a></li>
+                          href=" https://hdil.lojazap.com/categoria//?pagina=1" class="page-link">1</a></li>
                       <li class="page-item pages-after"><a class="page-link"
                           href=" https://hdil.lojazap.com/categoria//?pagina=2 ">2</a></li>
                       <li class="page-item pagination-next"><a class="page-link"
-                          href=" https://hdil.lojazap.com/categoria//?pagina=2 "><i class="bi bi-caret-right"></i></a>
-                      </li>
+                          href=" https://hdil.lojazap.com/categoria//?pagina=2 "><i
+                            class="lni lni-chevron-right"></i></a></li>
                     </ul>
                   </div>
                 </div>
@@ -748,7 +754,6 @@
 
               <!-- Main JS script -->
               <script src="assets/js/main.js"></script>
-
 </body>
 
 </html>
