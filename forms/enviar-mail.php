@@ -27,6 +27,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: enviar-mail.php?success=1#contact");
     exit; // Termina a execução do script após o redirecionamento
   } else {
+    // Adicione mensagens de depuração para entender o erro
+    echo "Erro ao enviar o email!";
+    echo error_get_last()['message'];
+
     // Envia uma resposta de erro para o formulário
     header("Location: enviar-mail.php?success=0#contact");
     exit; // Termina a execução do script após o redirecionamento
